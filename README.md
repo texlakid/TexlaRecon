@@ -23,13 +23,13 @@ echo 'export PATH=$PATH:$HOME/go/bin' >> ~/.bashrc && source ~/.bashrc
 
  ## 📱 Usage
 
-# Triage Mode (Fast, find live hosts only)
+1. Triage Mode (Fast, find live hosts only)
 
 ```bash
 python3 recon.py target.com --skip-nuclei
 ```
 
- # Full Scan with Scope Enforcement
+2. Full Scan with Scope Enforcement
 
 ```bash
 python3 recon.py target.com -s scope.txt -rl 10
@@ -44,12 +44,12 @@ nohup python3 recon.py target.com -s scope.txt --engagement 1 > run.log 2>&1 &
 
  ## 📂 Output Structure
 
- **Every run creates a timestamped directory** `(recon_target.com_YYYYMMDD_HHMMSS/):`
+ **Every run creates a timestamped directory** (recon_target.com_YYYYMMDD_HHMMSS/):
 
-.`live.txt:` All live hosts, titles, and tech stack.
-.`hits.jsonl:` Raw Nuclei JSON output.
-.`scan.log:` Full debug log of the run.
-.`texla_vulns.db:` Generated in the current directory when using `--engagement`.
+.live.txt: All live hosts, titles, and tech stack.
+.hits.jsonl: Raw Nuclei JSON output.
+.scan.log: Full debug log of the run.
+.texla_vulns.db: Generated in the current directory when using `--engagement`.
 
 ## ⚠️ Disclaimer
 
